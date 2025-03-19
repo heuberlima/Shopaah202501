@@ -5,7 +5,7 @@ public class CompraConcreta2 extends CompraFactory {
 
         // aqui eu poderia colocar todo o tipo de validação, por exemplo:
         if (usuarioComprador.getEmail().isEmpty())
-            throw new Exception("Só são permitidos usuários com email válido!");
+            throw new Exception("Só são permitidas compras de usuários com email válido!");
 
         return new Compra(idCompra, usuarioComprador);
     }

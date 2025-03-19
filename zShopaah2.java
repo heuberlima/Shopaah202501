@@ -1,4 +1,4 @@
-public class zShopaah {
+public class zShopaah2 {
 
     public static void main(String[] args) {
 
@@ -22,7 +22,7 @@ public class zShopaah {
         Produto produto3 = new Produto(103, "Monitor", "Monitor 24 polegadas", 2500.00, 3);
 
         Usuario usuario1 = new Usuario(1, "João Silva", "joao@exemplo.com");
-        Usuario usuario2 = new Usuario(2, "José Silva", "jose@exemplo.com");
+        Usuario usuario2 = new Usuario(2, "José Silva", "");
 
         usuario1.adicionarFavorito(produto1);
         usuario2.adicionarFavorito(produto2);
@@ -33,11 +33,12 @@ public class zShopaah {
 
         usuario2.removerFavorito(produto3);
 
-        CompraConcreta1 fabricaCompras = new CompraConcreta1();
+        // Cria o objeto da fabrica de compras
+        CompraConcreta2 fabricaCompras = new CompraConcreta2();
 
         Compra compra = null;
         try {
-            compra = fabricaCompras.criarCompra(1, usuario1);
+            compra = fabricaCompras.criarCompra(2, usuario2);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
