@@ -1,4 +1,4 @@
-public class Shopaah {
+public class zShopaah {
 
     public static void main(String[] args) {
 
@@ -33,7 +33,14 @@ public class Shopaah {
 
         usuario2.removerFavorito(produto3);
 
-        Compra compra = new Compra(1, usuario1);
+        CompraConcreta1 fabricaCompras = new CompraConcreta1();
+
+        Compra compra = null;
+        try {
+            compra = fabricaCompras.criarCompra(1, usuario1);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
         // Adicionando produtos à compra
         compra.adicionarProdutoListaCompras(produto1);
